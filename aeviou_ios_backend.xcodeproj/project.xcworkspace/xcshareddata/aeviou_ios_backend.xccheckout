@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>56F52964-625C-4FDB-9942-FAC8B22A7CBC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>aeviou_ios_backend</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF1E83BCB7D02522D1CC783F71F3E11594494316</key>
+		<string>https://github.com/flybrother/aeviou_ios_backend_remote.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>aeviou_ios_backend.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF1E83BCB7D02522D1CC783F71F3E11594494316</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/flybrother/aeviou_ios_backend_remote.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF1E83BCB7D02522D1CC783F71F3E11594494316</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF1E83BCB7D02522D1CC783F71F3E11594494316</string>
+			<key>IDESourceControlWCCName</key>
+			<string>aeviou_ios_backend</string>
+		</dict>
+	</array>
+</dict>
+</plist>

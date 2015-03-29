@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "AIBackEnd.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +18,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    ViewController *vc = [[ViewController alloc] init];
-    self.window.rootViewController = vc;
+//    ViewController *vc = [[ViewController alloc] init];
+//    self.window.rootViewController = vc;
     // Override point for customization after application launch.
+    
+    AIBPinyinTree *pinyinTree = [[AIBPinyinTree alloc] init];
+//    int z = [pinyinTree getNumberOfPinyin:@"bai"];
+    
+    
+    
+    
     return YES;
 }
 

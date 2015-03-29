@@ -14,6 +14,13 @@
 		45ECE7571ABE6E59006966D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7561ABE6E59006966D0 /* Images.xcassets */; };
 		45ECE75A1ABE6E59006966D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7581ABE6E59006966D0 /* LaunchScreen.xib */; };
 		45ECE7661ABE6E59006966D0 /* aeviou_ios_backendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7651ABE6E59006966D0 /* aeviou_ios_backendTests.m */; };
+		45ECE7741AC64984006966D0 /* phanzi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7701AC64984006966D0 /* phanzi.jpg */; };
+		45ECE7751AC64984006966D0 /* pinyin_list in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7711AC64984006966D0 /* pinyin_list */; };
+		45ECE7761AC64984006966D0 /* pnode.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7721AC64984006966D0 /* pnode.jpg */; };
+		45ECE7771AC64984006966D0 /* proot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45ECE7731AC64984006966D0 /* proot.jpg */; };
+		45ECE77D1AC64A97006966D0 /* AIBackEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE77C1AC64A97006966D0 /* AIBackEnd.m */; };
+		45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */; };
+		45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7851AC6574A006966D0 /* DDFileReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,16 @@
 		45ECE75F1ABE6E59006966D0 /* aeviou_ios_backendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aeviou_ios_backendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ECE7641ABE6E59006966D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45ECE7651ABE6E59006966D0 /* aeviou_ios_backendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aeviou_ios_backendTests.m; sourceTree = "<group>"; };
+		45ECE7701AC64984006966D0 /* phanzi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phanzi.jpg; path = "../../../../Downloads/Sliding-IME-Project/assets/phanzi.jpg"; sourceTree = "<group>"; };
+		45ECE7711AC64984006966D0 /* pinyin_list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pinyin_list; path = "../../../../Downloads/Sliding-IME-Project/assets/pinyin_list"; sourceTree = "<group>"; };
+		45ECE7721AC64984006966D0 /* pnode.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pnode.jpg; path = "../../../../Downloads/Sliding-IME-Project/assets/pnode.jpg"; sourceTree = "<group>"; };
+		45ECE7731AC64984006966D0 /* proot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = proot.jpg; path = "../../../../Downloads/Sliding-IME-Project/assets/proot.jpg"; sourceTree = "<group>"; };
+		45ECE77B1AC64A97006966D0 /* AIBackEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBackEnd.h; sourceTree = "<group>"; };
+		45ECE77C1AC64A97006966D0 /* AIBackEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBackEnd.m; sourceTree = "<group>"; };
+		45ECE7811AC64BC8006966D0 /* AIBPinyinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinTree.h; sourceTree = "<group>"; };
+		45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinTree.m; sourceTree = "<group>"; };
+		45ECE7841AC6574A006966D0 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
+		45ECE7851AC6574A006966D0 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +98,8 @@
 		45ECE7481ABE6E59006966D0 /* aeviou_ios_backend */ = {
 			isa = PBXGroup;
 			children = (
+				45ECE7871AC6575C006966D0 /* Utils */,
+				45ECE76F1AC64954006966D0 /* wordLib */,
 				45ECE74D1ABE6E59006966D0 /* AppDelegate.h */,
 				45ECE74E1ABE6E59006966D0 /* AppDelegate.m */,
 				45ECE7501ABE6E59006966D0 /* ViewController.h */,
@@ -89,6 +108,10 @@
 				45ECE7561ABE6E59006966D0 /* Images.xcassets */,
 				45ECE7581ABE6E59006966D0 /* LaunchScreen.xib */,
 				45ECE7491ABE6E59006966D0 /* Supporting Files */,
+				45ECE77B1AC64A97006966D0 /* AIBackEnd.h */,
+				45ECE77C1AC64A97006966D0 /* AIBackEnd.m */,
+				45ECE7811AC64BC8006966D0 /* AIBPinyinTree.h */,
+				45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */,
 			);
 			path = aeviou_ios_backend;
 			sourceTree = "<group>";
@@ -117,6 +140,26 @@
 				45ECE7641ABE6E59006966D0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45ECE76F1AC64954006966D0 /* wordLib */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE7701AC64984006966D0 /* phanzi.jpg */,
+				45ECE7711AC64984006966D0 /* pinyin_list */,
+				45ECE7721AC64984006966D0 /* pnode.jpg */,
+				45ECE7731AC64984006966D0 /* proot.jpg */,
+			);
+			name = wordLib;
+			sourceTree = "<group>";
+		};
+		45ECE7871AC6575C006966D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE7841AC6574A006966D0 /* DDFileReader.h */,
+				45ECE7851AC6574A006966D0 /* DDFileReader.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +244,11 @@
 			files = (
 				45ECE7551ABE6E59006966D0 /* Main.storyboard in Resources */,
 				45ECE75A1ABE6E59006966D0 /* LaunchScreen.xib in Resources */,
+				45ECE7761AC64984006966D0 /* pnode.jpg in Resources */,
+				45ECE7751AC64984006966D0 /* pinyin_list in Resources */,
 				45ECE7571ABE6E59006966D0 /* Images.xcassets in Resources */,
+				45ECE7741AC64984006966D0 /* phanzi.jpg in Resources */,
+				45ECE7771AC64984006966D0 /* proot.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */,
 				45ECE7521ABE6E59006966D0 /* ViewController.m in Sources */,
 				45ECE74F1ABE6E59006966D0 /* AppDelegate.m in Sources */,
 				45ECE74C1ABE6E59006966D0 /* main.m in Sources */,
+				45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */,
+				45ECE77D1AC64A97006966D0 /* AIBackEnd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
