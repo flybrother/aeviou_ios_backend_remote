@@ -21,6 +21,7 @@
 		45ECE77D1AC64A97006966D0 /* AIBackEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE77C1AC64A97006966D0 /* AIBackEnd.m */; };
 		45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */; };
 		45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7851AC6574A006966D0 /* DDFileReader.m */; };
+		45ECE78C1AC7AF11006966D0 /* AIBPinyinRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinTree.m; sourceTree = "<group>"; };
 		45ECE7841AC6574A006966D0 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 		45ECE7851AC6574A006966D0 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
+		45ECE78A1AC7AF11006966D0 /* AIBPinyinRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinRoot.h; sourceTree = "<group>"; };
+		45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinRoot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 		45ECE7481ABE6E59006966D0 /* aeviou_ios_backend */ = {
 			isa = PBXGroup;
 			children = (
+				45ECE7891AC7AEE8006966D0 /* pRoot */,
+				45ECE7881AC7AEE1006966D0 /* pinyinTree */,
 				45ECE7871AC6575C006966D0 /* Utils */,
 				45ECE76F1AC64954006966D0 /* wordLib */,
 				45ECE74D1ABE6E59006966D0 /* AppDelegate.h */,
@@ -110,8 +115,6 @@
 				45ECE7491ABE6E59006966D0 /* Supporting Files */,
 				45ECE77B1AC64A97006966D0 /* AIBackEnd.h */,
 				45ECE77C1AC64A97006966D0 /* AIBackEnd.m */,
-				45ECE7811AC64BC8006966D0 /* AIBPinyinTree.h */,
-				45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */,
 			);
 			path = aeviou_ios_backend;
 			sourceTree = "<group>";
@@ -160,6 +163,24 @@
 				45ECE7851AC6574A006966D0 /* DDFileReader.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		45ECE7881AC7AEE1006966D0 /* pinyinTree */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE7811AC64BC8006966D0 /* AIBPinyinTree.h */,
+				45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */,
+			);
+			name = pinyinTree;
+			sourceTree = "<group>";
+		};
+		45ECE7891AC7AEE8006966D0 /* pRoot */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE78A1AC7AF11006966D0 /* AIBPinyinRoot.h */,
+				45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */,
+			);
+			name = pRoot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ECE78C1AC7AF11006966D0 /* AIBPinyinRoot.m in Sources */,
 				45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */,
 				45ECE7521ABE6E59006966D0 /* ViewController.m in Sources */,
 				45ECE74F1ABE6E59006966D0 /* AppDelegate.m in Sources */,

@@ -20,6 +20,7 @@
     self = [super init];
     if (self) {
         pinyinDict = NSMutableDictionary.new;
+        
         // load "pinyin_list"
         NSString* filePath = [[NSBundle mainBundle] pathForResource:@"pinyin_list"
                                                              ofType:@""];
@@ -27,9 +28,9 @@
         __block NSNumber *i = [[NSNumber alloc] initWithInt:0];
         [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
 //            NSLog(@"read line %d: %@", i,line);
-            char *a = [line cStringUsingEncoding:NSUTF8StringEncoding];
+            char *line_c = [line cStringUsingEncoding:NSUTF8StringEncoding];
             char pinyin_c[10],sheng[10],yun[10];
-            sscanf(a, "%s %s %s",pinyin_c,sheng,yun);
+            sscanf(line_c, "%s %s %s",pinyin_c,sheng,yun);
             NSString *pinyin = [NSString stringWithUTF8String:pinyin_c];
             if ([[pinyin substringToIndex:1] isEqualToString:@"'"]) {
                 pinyin = [pinyin substringFromIndex:1];

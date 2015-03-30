@@ -22,7 +22,7 @@
 //    self.window.rootViewController = vc;
     // Override point for customization after application launch.
     
-    AIBPinyinTree *pinyinTree = [[AIBPinyinTree alloc] init];
+    AIBackEnd *aeviouBackend = [[AIBackEnd alloc] init];
 //    int z = [pinyinTree getNumberOfPinyin:@"bai"];
     
     

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AIBPinyinTree.h"
+
 
 
 @interface AIBackEnd : NSObject
 
-@property (nonatomic,strong) AIBPinyinTree *pinyinTree;
+
 
 @end
