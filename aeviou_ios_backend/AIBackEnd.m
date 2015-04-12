@@ -26,7 +26,8 @@
         int ret = -1;
         ret = [pinyinRoot getOffsetOfPinyinNumber:288];
         NSLog(@"ret is %d",ret);
-        AIBPinyinNode *node = [pinyinForest getNodeByOffset:ret];
+//        AIBPinyinNode *node = [pinyinForest getNodeByOffset:ret];
+        AIBPinyinNode *node = [pinyinForest findNodeOfPinyinNumbers:@[@(288)] ByOffset:ret];
     }
     return self;
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452ABC7D1ADA245000DE219A /* AIBPinyinNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 452ABC7C1ADA245000DE219A /* AIBPinyinNode.m */; };
+		45BCE36A1ADA36A3002E3319 /* AIBPinyinHanzi.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BCE3691ADA36A3002E3319 /* AIBPinyinHanzi.m */; };
 		45ECE74C1ABE6E59006966D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE74B1ABE6E59006966D0 /* main.m */; };
 		45ECE74F1ABE6E59006966D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE74E1ABE6E59006966D0 /* AppDelegate.m */; };
 		45ECE7521ABE6E59006966D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7511ABE6E59006966D0 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		452ABC7B1ADA245000DE219A /* AIBPinyinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinNode.h; sourceTree = "<group>"; };
 		452ABC7C1ADA245000DE219A /* AIBPinyinNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinNode.m; sourceTree = "<group>"; };
+		45BCE3681ADA36A3002E3319 /* AIBPinyinHanzi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinHanzi.h; sourceTree = "<group>"; };
+		45BCE3691ADA36A3002E3319 /* AIBPinyinHanzi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinHanzi.m; sourceTree = "<group>"; };
 		45ECE7461ABE6E59006966D0 /* aeviou_ios_backend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aeviou_ios_backend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ECE74A1ABE6E59006966D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45ECE74B1ABE6E59006966D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +101,15 @@
 			name = pNode;
 			sourceTree = "<group>";
 		};
+		45BCE3671ADA3687002E3319 /* pHanzi */ = {
+			isa = PBXGroup;
+			children = (
+				45BCE3681ADA36A3002E3319 /* AIBPinyinHanzi.h */,
+				45BCE3691ADA36A3002E3319 /* AIBPinyinHanzi.m */,
+			);
+			name = pHanzi;
+			sourceTree = "<group>";
+		};
 		45ECE73D1ABE6E59006966D0 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		45ECE7481ABE6E59006966D0 /* aeviou_ios_backend */ = {
 			isa = PBXGroup;
 			children = (
+				45BCE3671ADA3687002E3319 /* pHanzi */,
 				45ECE78D1ADA1464006966D0 /* pForest */,
 				45ECE7891AC7AEE8006966D0 /* pRoot */,
 				45ECE7881AC7AEE1006966D0 /* pinyinTree */,
@@ -342,6 +355,7 @@
 				45ECE7951ADA1DDD006966D0 /* AIBOffsetReader.m in Sources */,
 				45ECE74C1ABE6E59006966D0 /* main.m in Sources */,
 				45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */,
+				45BCE36A1ADA36A3002E3319 /* AIBPinyinHanzi.m in Sources */,
 				45ECE7981ADA207F006966D0 /* AIBPinyinForest.m in Sources */,
 				45ECE77D1AC64A97006966D0 /* AIBackEnd.m in Sources */,
 			);
