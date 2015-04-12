@@ -27,7 +27,6 @@
         DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:filePath];
         __block NSNumber *i = [[NSNumber alloc] initWithInt:0];
         [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
-//            NSLog(@"read line %d: %@", i,line);
             char *line_c = [line cStringUsingEncoding:NSUTF8StringEncoding];
             char pinyin_c[10],sheng[10],yun[10];
             sscanf(line_c, "%s %s %s",pinyin_c,sheng,yun);
@@ -35,7 +34,6 @@
             if ([[pinyin substringToIndex:1] isEqualToString:@"'"]) {
                 pinyin = [pinyin substringFromIndex:1];
             }
-//            NSLog(@"%@ %s %s",pinyin,sheng,yun);
             [pinyinDict setObject:i forKey:pinyin];
             i = [NSNumber numberWithInt:[i intValue]+1];
         }];

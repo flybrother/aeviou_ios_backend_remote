@@ -7,6 +7,7 @@
 //
 
 #import "AIBPinyinRoot.h"
+#import "AIBOffsetReader.h"
 
 @implementation AIBPinyinRoot{
     NSData *prootData;
@@ -24,9 +25,10 @@
 }
 
 -(int)getOffsetOfPinyinNumber:(int)number{
-    NSRange range = {4*number,4};
-    NSData *offsetData = [prootData subdataWithRange:range];
-    return CFSwapInt32BigToHost(*((int*)(offsetData.bytes)));
+//    NSRange range = {4*number,4};
+//    NSData *offsetData = [prootData subdataWithRange:range];
+//    return CFSwapInt32BigToHost(*((int*)(offsetData.bytes)));
+    return [AIBOffsetReader readIntAtOffset:4*number ofSize:4 inBigEndian:YES ofData:prootData];
 }
 
 @end

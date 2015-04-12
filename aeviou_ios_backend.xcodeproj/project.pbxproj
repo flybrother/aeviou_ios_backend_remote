@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452ABC7D1ADA245000DE219A /* AIBPinyinNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 452ABC7C1ADA245000DE219A /* AIBPinyinNode.m */; };
 		45ECE74C1ABE6E59006966D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE74B1ABE6E59006966D0 /* main.m */; };
 		45ECE74F1ABE6E59006966D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE74E1ABE6E59006966D0 /* AppDelegate.m */; };
 		45ECE7521ABE6E59006966D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7511ABE6E59006966D0 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 		45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7821AC64BC8006966D0 /* AIBPinyinTree.m */; };
 		45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7851AC6574A006966D0 /* DDFileReader.m */; };
 		45ECE78C1AC7AF11006966D0 /* AIBPinyinRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */; };
+		45ECE7951ADA1DDD006966D0 /* AIBOffsetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7941ADA1DDD006966D0 /* AIBOffsetReader.m */; };
+		45ECE7981ADA207F006966D0 /* AIBPinyinForest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECE7971ADA207F006966D0 /* AIBPinyinForest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452ABC7B1ADA245000DE219A /* AIBPinyinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinNode.h; sourceTree = "<group>"; };
+		452ABC7C1ADA245000DE219A /* AIBPinyinNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinNode.m; sourceTree = "<group>"; };
 		45ECE7461ABE6E59006966D0 /* aeviou_ios_backend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aeviou_ios_backend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ECE74A1ABE6E59006966D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45ECE74B1ABE6E59006966D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +65,10 @@
 		45ECE7851AC6574A006966D0 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
 		45ECE78A1AC7AF11006966D0 /* AIBPinyinRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinRoot.h; sourceTree = "<group>"; };
 		45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinRoot.m; sourceTree = "<group>"; };
+		45ECE7931ADA1DDD006966D0 /* AIBOffsetReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBOffsetReader.h; sourceTree = "<group>"; };
+		45ECE7941ADA1DDD006966D0 /* AIBOffsetReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBOffsetReader.m; sourceTree = "<group>"; };
+		45ECE7961ADA207F006966D0 /* AIBPinyinForest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBPinyinForest.h; sourceTree = "<group>"; };
+		45ECE7971ADA207F006966D0 /* AIBPinyinForest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBPinyinForest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452ABC7A1ADA240100DE219A /* pNode */ = {
+			isa = PBXGroup;
+			children = (
+				452ABC7B1ADA245000DE219A /* AIBPinyinNode.h */,
+				452ABC7C1ADA245000DE219A /* AIBPinyinNode.m */,
+			);
+			name = pNode;
+			sourceTree = "<group>";
+		};
 		45ECE73D1ABE6E59006966D0 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +119,7 @@
 		45ECE7481ABE6E59006966D0 /* aeviou_ios_backend */ = {
 			isa = PBXGroup;
 			children = (
+				45ECE78D1ADA1464006966D0 /* pForest */,
 				45ECE7891AC7AEE8006966D0 /* pRoot */,
 				45ECE7881AC7AEE1006966D0 /* pinyinTree */,
 				45ECE7871AC6575C006966D0 /* Utils */,
@@ -159,8 +178,8 @@
 		45ECE7871AC6575C006966D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				45ECE7841AC6574A006966D0 /* DDFileReader.h */,
-				45ECE7851AC6574A006966D0 /* DDFileReader.m */,
+				45ECE7921ADA1DA1006966D0 /* OffsetReader */,
+				45ECE7911ADA15DE006966D0 /* DDFileReader */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -181,6 +200,34 @@
 				45ECE78B1AC7AF11006966D0 /* AIBPinyinRoot.m */,
 			);
 			name = pRoot;
+			sourceTree = "<group>";
+		};
+		45ECE78D1ADA1464006966D0 /* pForest */ = {
+			isa = PBXGroup;
+			children = (
+				452ABC7A1ADA240100DE219A /* pNode */,
+				45ECE7961ADA207F006966D0 /* AIBPinyinForest.h */,
+				45ECE7971ADA207F006966D0 /* AIBPinyinForest.m */,
+			);
+			name = pForest;
+			sourceTree = "<group>";
+		};
+		45ECE7911ADA15DE006966D0 /* DDFileReader */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE7841AC6574A006966D0 /* DDFileReader.h */,
+				45ECE7851AC6574A006966D0 /* DDFileReader.m */,
+			);
+			name = DDFileReader;
+			sourceTree = "<group>";
+		};
+		45ECE7921ADA1DA1006966D0 /* OffsetReader */ = {
+			isa = PBXGroup;
+			children = (
+				45ECE7931ADA1DDD006966D0 /* AIBOffsetReader.h */,
+				45ECE7941ADA1DDD006966D0 /* AIBOffsetReader.m */,
+			);
+			name = OffsetReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +337,12 @@
 				45ECE78C1AC7AF11006966D0 /* AIBPinyinRoot.m in Sources */,
 				45ECE7831AC64BC8006966D0 /* AIBPinyinTree.m in Sources */,
 				45ECE7521ABE6E59006966D0 /* ViewController.m in Sources */,
+				452ABC7D1ADA245000DE219A /* AIBPinyinNode.m in Sources */,
 				45ECE74F1ABE6E59006966D0 /* AppDelegate.m in Sources */,
+				45ECE7951ADA1DDD006966D0 /* AIBOffsetReader.m in Sources */,
 				45ECE74C1ABE6E59006966D0 /* main.m in Sources */,
 				45ECE7861AC6574A006966D0 /* DDFileReader.m in Sources */,
+				45ECE7981ADA207F006966D0 /* AIBPinyinForest.m in Sources */,
 				45ECE77D1AC64A97006966D0 /* AIBackEnd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +536,7 @@
 				45ECE76B1ABE6E59006966D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45ECE76C1ABE6E59006966D0 /* Build configuration list for PBXNativeTarget "aeviou_ios_backendTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +545,7 @@
 				45ECE76E1ABE6E59006966D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
