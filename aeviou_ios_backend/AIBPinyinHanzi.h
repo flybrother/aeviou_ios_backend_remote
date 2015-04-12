@@ -10,4 +10,7 @@
 
 @interface AIBPinyinHanzi : NSObject
 
+
+-(NSMutableArray *)getHanziArrayAtOffset:(int)offset;
+
 @end

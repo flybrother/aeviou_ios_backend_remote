@@ -48,7 +48,7 @@
     }
     
     // binary search
-    pinyinNumber = 11;
+//    pinyinNumber = 11;
     int targetIndex = [self binarySearch:pinyinNumber In:childrenPinyinNumbers With:0 And:childrenPinyinNumbers.count-1];
     if (targetIndex == -1) {
         return nil;

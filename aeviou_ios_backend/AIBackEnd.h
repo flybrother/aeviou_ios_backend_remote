@@ -12,6 +12,6 @@
 
 @interface AIBackEnd : NSObject
 
-
+-(NSMutableArray *)getHanziArrayByPinyin:(NSArray *)pinyins;
 
 @end

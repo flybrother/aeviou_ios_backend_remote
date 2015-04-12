@@ -12,4 +12,6 @@
 
 + (int)readIntAtOffset:(int)offset ofSize:(int)size inBigEndian:(BOOL)isBigEndian ofData:(NSData *)data;
 
++ (NSString *)readPinyinAtOffset:(int)offset ofSize:(int)size inBigEndian:(BOOL)isBigEndian ofData:(NSData *)data;
+
 @end

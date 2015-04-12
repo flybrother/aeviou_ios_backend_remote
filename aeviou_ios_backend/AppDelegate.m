@@ -23,6 +23,7 @@
     // Override point for customization after application launch.
     
     AIBackEnd *aeviouBackend = [[AIBackEnd alloc] init];
+    NSArray *test = [aeviouBackend getHanziArrayByPinyin:@[@"zhong",@"guo"]];
 //    int z = [pinyinTree getNumberOfPinyin:@"bai"];
     
     
