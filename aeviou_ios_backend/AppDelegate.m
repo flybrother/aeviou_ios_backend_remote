@@ -14,17 +14,22 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+
+
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    ViewController *vc = [[ViewController alloc] init];
-//    self.window.rootViewController = vc;
+    ViewController *vc = [[ViewController alloc] init];
+    self.window.rootViewController = vc;
     // Override point for customization after application launch.
     
-    AIBackEnd *aeviouBackend = [[AIBackEnd alloc] init];
-    NSArray *test = [aeviouBackend getHanziArrayByPinyin:@[@"zhong",@"guo"]];
-//    int z = [pinyinTree getNumberOfPinyin:@"bai"];
+    
+  
+    
+    
+
     
     
     
