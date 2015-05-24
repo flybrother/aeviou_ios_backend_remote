@@ -8,7 +8,10 @@
 
 #import "AIBPinyinForest.h"
 #import "AIBOffsetReader.h"
+#import "AIBPinyinRoot.h"
 #import "AIBPinyinNode.h"
+#warning  need to be removed!
+#import "AIBPinyinHanzi.h"
 
 @implementation AIBPinyinForest{
     NSData *pForestData;
@@ -34,12 +37,25 @@
     node.maxFrequency = [AIBOffsetReader readIntAtOffset:offset+6 ofSize:4 inBigEndian:YES ofData:pForestData];
     node.childrenSize = [AIBOffsetReader readIntAtOffset:offset+10 ofSize:2 inBigEndian:YES ofData:pForestData];
     node.childrenOffsetInPNode = [AIBOffsetReader readIntAtOffset:offset+12 ofSize:4 inBigEndian:YES ofData:pForestData];
+    
+    node.isWordNode = YES;
+    if (node.offsetInPHanzi < 0) {
+        node.isWordNode = NO;
+    }
+    
+    // 待解决问题
+    if (node.childrenOffsetInPNode < 0) {
+        node.childrenSize = -1;
+    }
     return node;
 }
 
 // use binary search to search a possible child node with given pinyinNumber in children nodes start from offset
 // return nil if can't be found
 -(AIBPinyinNode *)searchPinyinNumber:(int)pinyinNumber inChildrenOf:(AIBPinyinNode *)parentNode{
+    if (parentNode.childrenSize <= 0)
+        return nil;
+    
     // compose array made up of children pinyin numbers
     NSMutableArray *childrenPinyinNumbers = NSMutableArray.new;
     for (int i=0; i<parentNode.childrenSize; i++) {
@@ -94,6 +110,41 @@
         }
     }
     return currentNode;
+}
+
+
+-(NSMutableArray *)getSearchMatrixColumnForPinyinNumbers:(NSArray *)pinyinNumbers{
+    // 初始化返回结果的数组
+    NSMutableArray *searchMatrixColumn = NSMutableArray.new;
+    for (int i=0; i<pinyinNumbers.count; i++) {
+        [searchMatrixColumn addObject:@""];
+    }
+    
+    // 从当前节点开始按传进来的拼音序列顺序搜索
+    AIBPinyinNode *currentNode = [[AIBPinyinNode alloc] init];
+    AIBPinyinRoot *pinyinRoot = [[AIBPinyinRoot alloc] init];
+    int offset = [pinyinRoot getOffsetOfPinyinNumber:((NSNumber *)[pinyinNumbers firstObject]).intValue]; // 根节点offset
+    currentNode = [self getNodeByOffset:offset];
+    for (int i=0; i<pinyinNumbers.count; i++) {
+        if (currentNode) {
+            if (currentNode.isWordNode){  // 找到了一个可能的子节点而且不是中间节点可以组成词语
+                AIBPinyinHanzi *pinyinHanzi = [[AIBPinyinHanzi alloc] init];
+                NSArray *arr = [pinyinHanzi getHanziArrayAtOffset:currentNode.offsetInPHanzi];
+                searchMatrixColumn[i] = [arr firstObject];
+            }
+            
+            if (i >= pinyinNumbers.count - 1) {
+                break;
+            }
+            int pinyinNumber = ((NSNumber *)[pinyinNumbers objectAtIndex:i+1]).intValue;
+            currentNode = [self searchPinyinNumber:pinyinNumber inChildrenOf:currentNode];
+        } else {
+            break;
+        }
+        
+    }
+    
+    return searchMatrixColumn;
 }
 
 

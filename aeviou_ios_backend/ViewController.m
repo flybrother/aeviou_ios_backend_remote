@@ -56,13 +56,23 @@
     return self;
 }
 
--(void)getzz{
+-(void)getPinyinList{
     NSString *inputText = inputTextView.text;
     AIBackEnd *aeviouBackend = [[AIBackEnd alloc] init];
     NSArray *pinyinList = [inputText componentsSeparatedByString:@" "];
-    //    NSArray *test = [aeviouBackend getHanziArrayByPinyin:@[@"mei",@"guo"]];
+
     NSArray *test = [aeviouBackend getHanziArrayByPinyin:pinyinList];
     outputTextView.text = [test componentsJoinedByString:@"\n"];
+}
+
+-(void)sentenceTest{
+    NSString *inputText = inputTextView.text;
+    NSArray *pinyinList = [inputText componentsSeparatedByString:@" "];
+    
+    AIBackEnd *aeviouBackend = [[AIBackEnd alloc] init];
+    NSString *sentence = [aeviouBackend getSentenceByPinyin:pinyinList];
+    
+    outputTextView.text = sentence;
 }
 
 -(void)clearInput{
@@ -72,7 +82,8 @@
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     if ([text isEqualToString:@"\n"]) {
-        [self getzz];
+        [self sentenceTest];
+//        [self getPinyinList];
     }
     return YES;
 }

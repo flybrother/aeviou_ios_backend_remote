@@ -30,8 +30,10 @@
     NSMutableArray *hanziArray = NSMutableArray.new;
     for (int i=0; i<hanziLength; i++) {
         NSString *hanzi = [AIBOffsetReader readPinyinAtOffset:offset+4+i*(2*pinyinLength+4) ofSize:2*pinyinLength inBigEndian:YES ofData:pHanziData];
+        int freq = [AIBOffsetReader readIntAtOffset:offset+4+i*(2*pinyinLength+4)+2*pinyinLength ofSize:4 inBigEndian:YES ofData:pHanziData];
         [hanziArray addObject:hanzi];
     }
+
     return hanziArray;
 }
 

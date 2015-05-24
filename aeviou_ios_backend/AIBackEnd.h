@@ -14,4 +14,6 @@
 
 -(NSMutableArray *)getHanziArrayByPinyin:(NSArray *)pinyins;
 
+-(NSString *)getSentenceByPinyin:(NSArray *)pinyins;
+
 @end
